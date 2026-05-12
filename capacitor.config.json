@@ -1,0 +1,12 @@
+{
+  "appId": "com.suhyun.gratitudejar",
+  "appName": "GratitudeJar",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1500,
+      "backgroundColor": "#FDF8F0",
+      "androidScaleType": "CENTER_CROP"
+    }
+  }
+}

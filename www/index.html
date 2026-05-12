@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#FDF8F0">
+<title>GratitudeJar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header><h1>GratitudeJar</h1><p class="sub" id="date"></p></header>
+
+  <div class="jar-wrap">
+    <div class="jar" id="jar">
+      <div class="jar-glow"></div>
+      <div class="jar-count" id="jarCount">0</div>
+      <small>gratitudes</small>
+    </div>
+  </div>
+
+  <div class="card inputs-card">
+    <label>What are you grateful for today?</label>
+    <input type="text" class="g-input" id="g1" placeholder="1. Something small..." enterkeyhint="next">
+    <input type="text" class="g-input" id="g2" placeholder="2. A person..." enterkeyhint="next">
+    <input type="text" class="g-input" id="g3" placeholder="3. A moment..." enterkeyhint="done">
+    <button class="save-btn" id="saveBtn">Add to Jar</button>
+  </div>
+
+  <div class="section-title">History</div>
+  <div class="entries-list" id="entriesList"></div>
+
+  <div class="upgrade-banner" id="upgradeBanner">
+    <div><strong>GratitudeJar Pro</strong><p>Unlimited entries &amp; export</p></div>
+    <button class="upgrade-btn" id="upgradeBtn">$1.99</button>
+  </div>
+</div>
+
+<div class="modal" id="upgradeModal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-content upgrade-modal">
+    <h2>GratitudeJar Pro</h2>
+    <ul><li>Unlimited history</li><li>Export to PDF</li><li>Custom jar themes</li><li>Reminders</li></ul>
+    <button class="btn-primary" id="buyPro">Unlock for $1.99</button>
+    <button class="btn-text" id="closeUpgrade">Not now</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
