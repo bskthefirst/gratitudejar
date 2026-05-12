@@ -20,8 +20,9 @@ $('saveBtn').onclick=()=>{
   const today=localDateStr();const idx=entries.findIndex(e=>e.date===today);
   if(idx>=0){entries[idx].items=items;}else{entries.push({date:today,items:items});}
   if(!isPro&&entries.length>30)entries=entries.slice(-30);
-  save();$('g1').value='';$('g2').value='';$('g3').value='';haptic([10,30,10]);render();
+  save();$('g1').value='';$('g2').value='';$('g3').value='';$('g3').blur();haptic([10,30,10]);render();
 };
+[$('g1'),$('g2'),$('g3')].forEach((inp,idx)=>{inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();inp.blur();if(idx===2)$('saveBtn').click();}});});
 $('upgradeBtn').onclick=()=>{$('upgradeModal').classList.add('open');};
 $('buyPro').onclick=()=>{isPro=true;save();$('upgradeModal').classList.remove('open');haptic([10,30,10]);render();};
 $('closeUpgrade').onclick=()=>{$('upgradeModal').classList.remove('open');};
